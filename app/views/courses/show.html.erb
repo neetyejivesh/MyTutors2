@@ -1,0 +1,42 @@
+<div><h1> </h1></div>
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-lg-8">
+      <div class="card286">
+        <h1><%= @course.title %></h1>
+        <img class="card-img-top" src="<%= @course.photo_url %>
+        " alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text"> <%= @course.description  %>  </p>
+          <p>The course includes a lot of grammer exercises to help students improve their writing as well as their communication skills.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-4">
+      <div class="card286">
+        <div class="container">
+          <div class="form-wrapper">
+
+            <h2><strong>Book a Course</strong></h2>
+            <%= simple_form_for [@course,@booking] do |f| %>
+            <%= f.input :start_date, label: "Choose your dates:",
+              as: :string,
+              required: false,
+              input_html: { id: "range_start"} %>
+            <%= f.input :end_date, label: false,
+               as: :string,
+               required: false,
+               input_html: { id: "range_end" } %>
+            <%= f.button :submit, "Book", class: "btn btn-primary" %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="booking-form-div"
+  data-bookings="<%= @bookings_dates.to_json %>">
+</div>
