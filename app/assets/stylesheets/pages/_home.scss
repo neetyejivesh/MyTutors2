@@ -18,6 +18,7 @@ html {
   overflow-x: hidden;
   scroll-behavior: smooth;
   scroll-padding-top: 4rem;
+  background-color: white;
 }
 html::-webkit-scrollbar {
   width: 1rem;
@@ -39,7 +40,7 @@ section {
   color: #130F40;
 }
 .heading span {
-  color: #E67E22;
+  color: #A51C30;
 }
 .btn {
   display: inline-block;
@@ -154,7 +155,7 @@ section {
 }
 .about .row .content h3{
   font-size: 3rem;
-  color:var(--pink);
+  color:#A51C30;
 }
 .about .row .content p{
   font-size: 1.6rem;
