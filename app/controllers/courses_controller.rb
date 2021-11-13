@@ -23,6 +23,7 @@ class CoursesController < ApplicationController
       {
         from: booking.start_date, to:   booking.end_date
       }
+    
     end
   end
 

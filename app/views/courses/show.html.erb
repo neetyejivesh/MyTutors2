@@ -20,16 +20,17 @@
 
             <h2><strong>Book a Course</strong></h2>
             <%= simple_form_for [@course,@booking] do |f| %>
-            <%= f.input :start_date, label: "Choose your dates:",
-              as: :string,
-              required: false,
-              input_html: { id: "range_start"} %>
-            <%= f.input :end_date, label: false,
-               as: :string,
-               required: false,
-               input_html: { id: "range_end" } %>
-            <%= f.button :submit, "Book", class: "btn btn-primary" %>
+              <%= f.input :start_date, label: "Choose your dates:",
+                as: :string,
+                required: false,
+                input_html: { id: "range_start"} %>
+              <%= f.input :end_date, label: false,
+                as: :string,
+                required: false,
+                input_html: { id: "range_end" } %>
+              <%= f.button :submit, "Book", class: "btn btn-primary" %>
             <% end %>
+            <%= link_to  "create your review", new_course_review_path(@course) %>
           </div>
         </div>
       </div>
