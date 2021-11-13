@@ -100,23 +100,23 @@ cookery4.save!
 computer_science1 = Course.create( title: "Computer Science Grade 3", description:" Computer Science Courses and tutorials suitable for grade 3 students", photo_url:"https://images.unsplash.com/photo-1603354350317-6f7aaa5911c5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80",
 duration:"30 minutes",
 price: 100 ) 
-computer science1.user = john 
-computer science1.save!
+computer_science1.user = john 
+computer_science1.save!
 
 computer_science2 = Course.create( title: "Computer Science Garde 6", description:"Computer Science Courses and tutorials suitable for grade 6 students", photo_url:"https://images.unsplash.com/photo-1599666520394-50d845fe09c6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80",
 duration:"60 minutes",
 price: 100 )
-computer science2.user = john 
-computer science2.save!
+computer_science2.user = john 
+computer_science2.save!
 
 computer_science3 = Course.create( title: "Computer Science Grade 9", description:"Computer Science Courses and tutorials suitable for grade 9 students", photo_url:"https://images.unsplash.com/photo-1536148935331-408321065b18?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80",
 duration:"90 minutes",
 price: 100 ) 
-computer science3.user = john 
-computer science.save!
+computer_science3.user = john 
+computer_science3.save!
 
 computer_science4 = Course.create( title: "Computer Science Grade 12", description:"Computer Science Courses and tutorials suitable for grade 12 students", photo_url:"https://images.unsplash.com/photo-1529101091764-c3526daf38fe?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1333&q=80",
 duration:"120 minutes",
 price: 100 )
-computer science4.user = john 
-computer science4.save!
+computer_science4.user = john 
+computer_science4.save!
