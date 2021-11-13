@@ -21,19 +21,19 @@
         <div class="container">
           <div class="form-wrapper">
 
-            <h2><strong>Book a Course</strong></h2>
-            <%= simple_form_for [@course,@booking] do |f| %>
-              <%= f.input :start_date, label: "Choose your dates:",
-                as: :string,
-                required: false,
-                input_html: { id: "range_start"} %>
-              <%= f.input :end_date, label: false,
-                as: :string,
-                required: false,
-                input_html: { id: "range_end" } %>
-              <%= f.button :submit, "Book", class: "btn btn-primary" %>
-            <% end %>
+            <div class="container">
+              <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
+                <h2><strong>Book a Course</strong></h2>
+                <%= simple_form_for [@course,@booking] do |f| %>
+                  <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+                  <%= f.input :end_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+                  <%= f.button :submit, "book", class: "btn btn-primary" %>
+                <% end %>
+              </div>
+            </div>
 
+
+       
 <%  @course.reviews.each do |review|   %>
 <div class = "review">
 <%= review.comment %>
@@ -42,15 +42,8 @@
 <% end  %>
         
 
+ <%= link_to  "create your review", new_course_review_path(@course) %>
 
-
-
-
-
-
-
-
-            <%= link_to  "create your review", new_course_review_path(@course) %>
           </div>
         </div>
       </div>
@@ -58,6 +51,3 @@
   </div>
 </div>
 
-<div id="booking-form-div"
-  data-bookings="<%= @bookings_dates.to_json %>">
-</div>

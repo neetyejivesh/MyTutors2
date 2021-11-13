@@ -23,12 +23,12 @@ class BookingsController < ApplicationController
   def destroy
     @booking = Booking.find(params[:id])
     @course = Course.find(@booking.course_id)
-    if Booking.delete(params[:id]).positive?
+    if @booking.destroy
       flash[:success] = 'Booking has been cancelled'
     else
       flash[:error] = 'You fucked up ! , please try again'
     end
-    redirect_to booking_path(@booking)
+    redirect_to bookings_path
   end
 
   private
