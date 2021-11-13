@@ -30,6 +30,23 @@
                 input_html: { id: "range_end" } %>
               <%= f.button :submit, "Book", class: "btn btn-primary" %>
             <% end %>
+
+<%  @course.reviews.each do |review|   %>
+<div class = "review">
+<%= review.comment %>
+<%= review.rating %>
+</div>
+<% end  %>
+        
+
+
+
+
+
+
+
+
+
             <%= link_to  "create your review", new_course_review_path(@course) %>
           </div>
         </div>
