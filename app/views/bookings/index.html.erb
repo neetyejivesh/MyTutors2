@@ -5,6 +5,7 @@
       <div class="col-lg-2 h-5 justify-content-center m-2">
         <div class="card bg-light">
           <div class="card-body">
+            <img class="card-img-top" src="<%= booking.course.photo_url %>" alt="Card image cap">
             <h5 class="card-title"><%= booking.course.title %> </h5>
           </div>
           <ul class="list-group list-group-flush">
@@ -12,6 +13,10 @@
             <li class="list-group-item booklist"> schedule date: <%= booking.start_date %></li>
             <li class="list-group-item booklist"> schedule date: <%= booking.end_date %></li>
           </ul>
+          <%= link_to "Delete #{booking.course.title}",
+          booking_path(booking),
+          method: :delete,
+          data: { confirm: "Are you sure?" } %>
         </div>
       </div>
     <% end %>
@@ -23,4 +28,5 @@
     <%= link_to "Home",  root_path, class: "btn btn-primary"%>
   </div>
 </div>
+
 
