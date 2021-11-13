@@ -5,15 +5,18 @@ class ReviewsController < ApplicationController
       end
 
       def new
-        @review = Review.new
+        @new_review = Review.new
         @course = Course.find(params[:course_id])
       end
     
       def create
-        @review = Review.new(review_params)
-        @review.user = current_user
-        if @review.save
-          redirect_to new_review_path
+        @new_review = Review.new(review_params)
+        @new_review.user = current_user
+        @course = Course.find(params[:course_id])
+        @new_review.course = @course #thibo 
+      
+        if @new_review.save
+          redirect_to course_path(@course)
         else
           flash[:alert] = "Something went wrong."
           render :new
@@ -33,7 +36,7 @@ class ReviewsController < ApplicationController
       private
 
       def review_params
-        params.require(:review).permit(:content, :rating)
+        params.require(:review).permit(:comment, :rating, :course_id)
       end
     
 end
