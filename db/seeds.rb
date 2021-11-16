@@ -79,43 +79,43 @@ price: 100 )
 cookery1.user = john
 cookery1.save!
 
-cookery2 = Course.create( title: "Cookery Garde 6", description:"Cookery Courses and tutorials suitable for grade 6 students", photo_url:"https://images.unsplash.com/photo-1610558269197-70cfbad7c556?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=435&q=80",
+cookery2 = Course.create( title: "Public Speaking", description:"This course gives you a reliable model for preparing and delivering effective presentations. In business, in school, and in public life, we are often called upon to “make a few comments.” Often, people tasked with such speeches become flummoxed. They might not know what to talk about, or ramble without making a point, or simply be confusing to listen to. This course is designed to help you shine where others falter. ", photo_url:"https://images.unsplash.com/photo-1563807894768-f28bee0d37b6?ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8cHVibGljJTIwc3BlYWtpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
 duration:"60 minutes",
 price: 100 ) 
 cookery2.user = john
 cookery2.save!
 
-cookery3 = Course.create( title: "Cookery Grade 9", description:"Cookery Courses and tutorials suitable for grade 9 students", photo_url:"https://images.unsplash.com/photo-1605433246995-23f532d1e001?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+cookery3 = Course.create( title: "Chemistry A-level", description:"The emphasis throughout is on the understanding of concepts and the application of chemistry ideas in novel contexts as well as on the acquisition of knowledge. The course encourages creative thinking and problem-solving skills which are transferable to any future career path.", photo_url:"https://images.unsplash.com/photo-1602928321679-560bb453f190?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8Y2hlbWlzdHJ5fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
 duration:"90 minutes",
 price: 100 ) 
 cookery3.user = john
 cookery3.save!
 
-cookery4 = Course.create( title: "Cookery Grade 12", description:"Cookery Courses and tutorials suitable for grade 12 students", photo_url:"https://images.unsplash.com/photo-1556910103-1c02745aae4d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80",
+cookery4 = Course.create( title: "Computer science A-level", description:"Cookery Courses and tutorials suitable for grade 12 students", photo_url:"https://images.unsplash.com/photo-1556910103-1c02745aae4d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80",
 duration:"120 minutes",
 price: 100 ) 
 cookery4.user = john
 cookery4.save!
 
-computer_science1 = Course.create( title: "Computer Science Grade 3", description:" Computer Science Courses and tutorials suitable for grade 3 students", photo_url:"https://images.unsplash.com/photo-1603354350317-6f7aaa5911c5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80",
+computer_science1 = Course.create( title: "French A-level", description:"Learners will gain an understanding of how to use the language in a variety of situations. They will be expected to handle texts and other source materials, extracting information in order to respond to specific tasks. Through their studies, learners can expect to achieve greater fluency, accuracy and confidence in the language.", photo_url:"https://images.unsplash.com/photo-1551865673-9e9ee4f8cd4c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZnJlbmNofGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
 duration:"30 minutes",
 price: 100 ) 
 computer_science1.user = john 
 computer_science1.save!
 
-computer_science2 = Course.create( title: "Computer Science Garde 6", description:"Computer Science Courses and tutorials suitable for grade 6 students", photo_url:"https://images.unsplash.com/photo-1599666520394-50d845fe09c6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80",
+computer_science2 = Course.create( title: "General Paper", description:"This syllabus builds learners' ability to understand and write in English through the study of a broad range of contemporary topics. They will analyse opinions and ideas and learn how to construct an argument.", photo_url:"https://images.unsplash.com/photo-1543165796-5426273eaab3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGVuZ2xpc2h8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
 duration:"60 minutes",
 price: 100 )
 computer_science2.user = john 
 computer_science2.save!
 
-computer_science3 = Course.create( title: "Computer Science Grade 9", description:"Computer Science Courses and tutorials suitable for grade 9 students", photo_url:"https://images.unsplash.com/photo-1536148935331-408321065b18?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80",
+computer_science3 = Course.create( title: "Data Science", description:"Our full-time Data Science course in Mauritius gives you the skills you need to launch your career in a Data Science team in only 9 weeks. From Pandas to Deep Learning, you will finish the course knowing how to explore, clean and transform data into actionable insights and how to implement Machine Learning models from start to finish in a production environment, working in teams with the best-in-class tool belt.", photo_url:"https://images.unsplash.com/photo-1527474305487-b87b222841cc?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZGF0YSUyMHNjaWVuY2V8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
 duration:"90 minutes",
 price: 100 ) 
 computer_science3.user = john 
 computer_science3.save!
 
-computer_science4 = Course.create( title: "Computer Science Grade 12", description:"Computer Science Courses and tutorials suitable for grade 12 students", photo_url:"https://images.unsplash.com/photo-1529101091764-c3526daf38fe?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1333&q=80",
+computer_science4 = Course.create( title: "yoga course", description:"Daily yoga practice at home can help you stay healthy, more productive, calm and happy all day. Besides, these benefits are not just for you to enjoy. Doing these practices at home will not only keep you happy but your family members too will be able to feel the positive energy and happiness around. What’s more, you get a chance to practice them right in the comfort of your home, any time you wish.", photo_url:"https://images.unsplash.com/photo-1575052814086-f385e2e2ad1b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8eW9nYXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
 duration:"120 minutes",
 price: 100 )
 computer_science4.user = john 
