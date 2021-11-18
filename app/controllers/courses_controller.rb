@@ -29,16 +29,21 @@ class CoursesController < ApplicationController
 
   def create
     @course = Course.new(course_params)
-    @course.save
-    redirect_to course_path(@course)
+    @course.user = current_user
+    if @course.save
+      flash[:notice] = 'Course has been successfully created'
+      redirect_to course_path(@course)
+    else
+      render 'course/new'
+    end
   end
 
-  def update
-    @course = Course.find(params[:id])
-    @course.update(course_params)
-    flash[:notice] = 'course information has been updated'
-    redirect_to course_path
-  end
+  # def update
+  #   @course = Course.find(params[:id])
+  #   @course.update(course_params)
+  #   flash[:notice] = 'course information has been updated'
+  #   redirect_to course_path
+  # end
 
   def destroy
     @course.destroy
