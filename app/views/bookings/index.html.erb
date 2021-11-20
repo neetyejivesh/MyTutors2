@@ -19,14 +19,22 @@
           method: :delete,
           data: { confirm: "Are you sure?" } %>
         </div>
-          <form >
+          <!-- <form >
             <p>Click on the "Choose File" button to upload a file:</p>
             <input type="file" id="myFile" name="filename">
             <br /><br />
 
 
             <button class="btn-primary" type="submit">submit</button>
-          </form>
+          </form> -->
+          <%= simple_form_for(booking) do |f| %>
+            <!-- [...] -->
+            <%= f.input :photo, as: :file %>
+           <%=f.button :submit, class:"btn btn-primary"  %>
+          <% end %>
+          <% if booking.photo.attached? %>
+          <%= cl_image_tag booking.photo.key, height: 300, width: 400, crop: :fill %>
+          <% end %>
       </div>
     <% end %>
   <% end %>
