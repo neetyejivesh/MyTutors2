@@ -7,16 +7,22 @@ class BookingsController < ApplicationController
     @booking = Booking.new
   end
 
+def show 
+  @booking = Booking.find(params[:id])
+  @token=generate_token(@booking)
+end
+
+
   def create
     @course = Course.find(params[:course_id])
     @booking = Booking.new(booking_params)
     @booking.user = current_user
     @booking.course = @course
-    if @booking.save
+    if @booking.save!
       flash[:notice] = 'Course has been successfully booked'
       redirect_to bookings_path
     else
-      render 'course/show'
+      render 'courses/show'
     end
   end
 
@@ -40,4 +46,18 @@ class BookingsController < ApplicationController
   def booking_params
     params.require(:booking).permit(:start_date, :end_date)
   end
+
+  def generate_token(booking)
+    
+    token = Twilio::JWT::AccessToken.new ENV['ACCOUNT_SID'], ENV['KEY_ID'], ENV['AUTH_TOKEN'], [],
+        ttl: 14400,
+        identity: current_user.email
+   
+    grant = Twilio::JWT::AccessToken::VideoGrant.new
+    grant.room = booking.url_room
+    token.add_grant grant
+    
+    token.to_jwt
+  end
+
 end
