@@ -1,7 +1,7 @@
 class Booking < ApplicationRecord
   belongs_to :course
   belongs_to :user
-
+  has_one_attached :photo
 
   before_create :set_room_name
 

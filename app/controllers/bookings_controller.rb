@@ -7,11 +7,10 @@ class BookingsController < ApplicationController
     @booking = Booking.new
   end
 
-def show 
-  @booking = Booking.find(params[:id])
-  @token=generate_token(@booking)
-end
-
+  def show
+    @booking = Booking.find(params[:id])
+    @token=generate_token(@booking)
+  end
 
   def create
     @course = Course.find(params[:course_id])
@@ -23,6 +22,16 @@ end
       redirect_to bookings_path
     else
       render 'courses/show'
+    end
+  end
+
+  def update
+    @booking = Booking.find(params[:id])
+    if @booking.update(booking_params)
+      redirect_to bookings_path
+
+    else
+      flash[:error] = 'You fucked up ! , please try again'
     end
   end
 
@@ -44,7 +53,7 @@ end
   end
 
   def booking_params
-    params.require(:booking).permit(:start_date, :end_date)
+    params.require(:booking).permit(:start_date, :end_date, :photo)
   end
 
   def generate_token(booking)
