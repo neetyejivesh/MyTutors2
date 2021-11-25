@@ -1,14 +1,14 @@
 .user-btn {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: center;
     padding: 0;
     margin: 0;
     list-style: none;
   }
   
     .participant {
-    border-radius: 16px;
+    border-radius: 10px;
     overflow: hidden;
     video {
       border-radius: 16px;
@@ -24,3 +24,9 @@
     border-radius: 16px;
   }
   
+  // .teacher .card-container{
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+  //   flex-wrap: wrap;
+  //   padding:2rem 0;
