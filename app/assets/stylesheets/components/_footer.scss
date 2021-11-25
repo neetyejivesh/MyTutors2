@@ -1,3 +1,7 @@
+body{
+  min-height: 100vh
+}
+
 .footer {
     background: #F4F4F4;
     display: flex;
@@ -5,8 +9,10 @@
     justify-content: center;
     height: 100px;
     padding: 0px 50px;
-    color: #A51C30;
     width: 100vw;
+    position: sticky;
+    top: 100%;
+
   }
   .footer a{
     display: inline-block;
@@ -15,7 +21,7 @@
     height: 50px;
     line-height: 50px;
     text-align: center;
-    color: grey;
+    color: #A51C30;
     margin: 0 16px;
     transition: .4s linear;
     position: relative;
