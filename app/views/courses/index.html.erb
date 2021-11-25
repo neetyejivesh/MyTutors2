@@ -1,8 +1,10 @@
 <div class="container">
   <h1>Our <span>course</span> list</h1>
     <h4>Take a look at our best courses:</h4>
-
+    
+<div class="btn"> 
 <%= link_to  "create your course", new_course_path %>
+</div>
 
   <div class="d-flex row justify-content-center">
     <% @courses.each do |course| %>
