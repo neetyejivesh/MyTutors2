@@ -1,3 +1,4 @@
+<div class="form-login">
 <%= simple_form_for(@course) do |f| %>
   <%= f.input :title %>
   <%= f.input :description %>
@@ -6,3 +7,4 @@
   <%= f.input :photo_url %>
   <%= f.button :submit, "create course", class: "btn btn-primary" %>
 <% end %>
+</div>
