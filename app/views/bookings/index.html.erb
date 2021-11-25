@@ -4,6 +4,7 @@
 
     <div class="d-flex row justify-content-center">
       <% @bookings.each do |booking| %>
+      <%= link_to  "Go to class", course_booking_path(booking.course,booking) %>
         <div class="col-lg-4">
           <div class="card bg-light my-3">
             <%= image_tag(booking.course.photo_url, height: 300) %>
