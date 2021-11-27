@@ -1,6 +1,7 @@
 class BookingsController < ApplicationController
   def index
     @bookings = current_user.bookings
+    @teacher_bookings = current_user.courses.map(&:bookings).flatten
   end
 
   def new
