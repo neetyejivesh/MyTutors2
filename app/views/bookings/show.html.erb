@@ -4,6 +4,8 @@
   </div>
 </div>
 
+
+
 <div class="container">
   <div 
     class="twilio-video" 
@@ -22,7 +24,7 @@
           <video id="userVideo" autoplay muted="true" ></video>
           <div>
             <button id='leave-btn' class='btn btn-primary mt-3'> 
-              Quittez
+              Quit Session
             </button>
           </div>
         </div>
@@ -38,6 +40,10 @@
     </div>
       <% end %>
     <%= link_to '', root_path, class: 'd-none root-link', data: {turbolinks: false}  %>
+
+   <div class="btn">
+ <%= link_to  "create your review", new_course_review_path(@booking.course) %>
+ </div>
 
   </div>
 </div>

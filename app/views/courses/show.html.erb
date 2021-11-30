@@ -2,7 +2,7 @@
 <div class="container">
   <div class="row">
     <div class="col-9 col-lg-7">
-      <div class="card286">
+      <div class="card">
         <h1><%= @course.title %></h1>
         <img class="card-img-top" src="<%= @course.photo_url %>
         " alt="Card image cap">
@@ -39,9 +39,10 @@
 <% end  %>
 <br></br>
 
-<div class="btn">
- <%= link_to  "create your review", new_course_review_path(@course) %>
- </div>
+
+ 
+
+
 
 </div>
 <br></br>
