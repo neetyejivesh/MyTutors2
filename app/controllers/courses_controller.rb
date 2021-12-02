@@ -1,4 +1,5 @@
 class CoursesController < ApplicationController
+  before_action :set_course, only: [:destroy]
   def index
     if params[:query].present?
       @courses = Course.where("title ILIKE ?", "%#{params[:query]}%")
