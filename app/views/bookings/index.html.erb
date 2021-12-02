@@ -1,18 +1,13 @@
 <div class="container">
-<h1>my booking list</h1>
-
-
-    <div class="d-flex row justify-content-center">
+  <h1>my booking list</h1>
+  <div class="d-flex row justify-content-center">
       <% @bookings.each do |booking| %>
-
         <div class="col-lg-4">
           <div class="card bg-light my-3">
             <div class="btn" style="margin-bottom: 10px;">
-
-             <%= link_to  "Go to class", course_booking_path(booking.course,booking) %>
-
+              <%= link_to  "Go to class", course_booking_path(booking.course,booking) %>
             </div>
-            <%= image_tag(booking.course.photo_url, height: 300) %>
+              <%= image_tag(booking.course.photo_url, height: 300) %>
             <div class="card-body d-flex align-items-center">
 
             </div>
@@ -30,67 +25,71 @@
               <i class="fas fa-trash-alt  "></i>
               </span>
               <% end %>
-
             </div>
-            </div>
-              <%= simple_form_for(booking) do |f| %>
-                <!-- [...] -->
-                <%= f.input :photo, as: :file %>
-               <%=f.button :submit, class:"btn btn-danger"  %>
-              <% end %>
-              <% if booking.photo.attached? %>
-              <%= cl_image_tag booking.photo.key, height: 150, width: 300, crop: :fill,
-              class: "booking_index_image" %>
-              <% end %>
+          <%= simple_form_for(booking) do |f| %>
+            <!-- [...] -->
+            <%= f.input :photo, as: :file %>
+           <%=f.button :submit, class:"btn btn-danger"  %>
+          <% end %>
+          <% if booking.photo.attached? %>
+          <%= cl_image_tag booking.photo.key, height: 150, width: 300, crop: :fill,
+          class: "booking_index_image" %>
+          <% end %>
           </div>
-        <% end %>
-          </div>
-
         </div>
-
-    </div>
-     <div class="d-flex justify-content-center">
-       <div class="justify-content-center">
-         <%= link_to "Back To course List",  courses_path, class: "btn btn-primary"%>
-         <%= link_to "Home",  root_path, class: "btn btn-primary"%>
-       </div>
-    </div>
+      <% end %>
+  </div>
+</div>
 
 
-    <div class="d-flex row justify-content-center">
-      <% @teacher_bookings.each do |booking| %>
-      <%= link_to  "Go to class", course_booking_path(booking.course,booking) %>
-        <div class="col-lg-4">
-          <div class="card bg-light my-3">
-            <%= image_tag(booking.course.photo_url, height: 300) %>
-            <div class="card-body d-flex align-items-center">
 
-            </div>
-            <div class="card-body">
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item booklist"> schedule date: <%= booking.start_date %></li>
-                <li class="list-group-item booklist"> schedule date: <%= booking.end_date %></li>
-              </ul>
-            </div>
+<div class="d-flex justify-content-center">
+ <div class="justify-content-center">
+   <%= link_to "Back To course List",  courses_path, class: "btn btn-primary"%>
+   <%= link_to "Home",  root_path, class: "btn btn-primary"%>
+ </div>
+</div>
+
+
+<div class="container">
+  <div class="d-flex row justify-content-center">
+    <% @teacher_bookings.each do |booking| %>
+      <div class="col-lg-4">
+        <div class="card bg-light my-3">
+          <div class="btn" style="margin-bottom: 10px;">
+            <%= link_to  "Go to class", course_booking_path(booking.course,booking) %>
+          </div>
+          <%= image_tag(booking.course.photo_url, height: 300) %>
+          <div class="card-body d-flex align-items-center">
+
+          </div>
+          <div class="card-body">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item booklist"> schedule date: <%= booking.start_date %></li>
+              <li class="list-group-item booklist"> schedule date: <%= booking.end_date %></li>
+            </ul>
+            <div class="trash-link">
               <%= link_to booking_path(booking),
-              method: :delete,
-              data: { confirm: "Are you sure?" }, class: 'card-remove-link' do %>
-              <i class="fas fa-trash-alt"></i>
+                method: :delete,
+                data: { confirm: "Are you sure?" }, class: 'card-remove-link' do %>
+                <span style="font-size: 3em; color: Mediumslateblue;">
+                <i class="fas fa-trash-alt  "></i>
+                </span>
               <% end %>
             </div>
-              <%= simple_form_for(booking) do |f| %>
-                <!-- [...] -->
-                <%= f.input :photo, as: :file %>
-               <%=f.button :submit, class:"btn btn-primary"  %>
-              <% end %>
-              <% if booking.photo.attached? %>
-              <%= cl_image_tag booking.photo.key, height: 300, width: 400, crop: :fill %>
-              <% end %>
           </div>
-        <% end %>
-          </div>
-
-
+          <%= simple_form_for(booking) do |f| %>
+            <!-- [...] -->
+            <%= f.input :photo, as: :file %>
+           <%=f.button :submit, class:"btn btn-danger"  %>
+          <% end %>
+          <% if booking.photo.attached? %>
+          <%= cl_image_tag booking.photo.key, height: 150, width: 300, crop: :fill,
+          class: "booking_index_image" %>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
  
-
-
